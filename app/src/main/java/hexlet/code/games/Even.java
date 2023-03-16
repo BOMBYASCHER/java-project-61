@@ -1,43 +1,42 @@
-package hexlet.code;
-
-import java.util.Scanner;
+package hexlet.code.games;
 
 import static hexlet.code.Cli.getName;
+import static hexlet.code.Engine.congratsMessage;
+import static hexlet.code.Engine.passMessage;
+import static hexlet.code.Engine.questionMessage;
+import static hexlet.code.Engine.stopMessage;
+import static hexlet.code.Engine.userEnter;
+import static hexlet.code.Engine.gameRounds;
 public class Even {
     public static void evenGame() {
         String username = getName();
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-        byte gameSteps = 3;
         byte i = 0;
         String correctAnswer;
-        while (i < gameSteps) {
+        while (i < gameRounds) {
             byte number = (byte) (Math.random() * 100);
-            System.out.println("Question: " + number);
-            System.out.print("Your answer: ");
-            Scanner scanner = new Scanner(System.in);
-            String userAnswer = scanner.next();
+            questionMessage(String.valueOf(number));
+            String userAnswer = userEnter();
             if (number % 2 == 0) {
                 correctAnswer = "yes";
             } else {
                 correctAnswer = "no";
             }
             if (number % 2 == 0 && userAnswer.equals("yes")) {
-                System.out.println("Correct!");
+                passMessage();
                 i++;
             }
             if (number % 2 != 0 && userAnswer.equals("no")) {
-                System.out.println("Correct!");
+                passMessage();
                 i++;
             }
             if (!userAnswer.equals(correctAnswer)) {
-                System.out.println("'" + userAnswer + "'" + " is wrong answer ;(. "
-                    + "Correct answer was " + "'" + correctAnswer + "'");
-                System.out.println("Let's try again, " + username + "!");
+                stopMessage(userAnswer, correctAnswer, username);
                 break;
             }
         }
-        if (gameSteps == i) {
-            System.out.println("Congratulations, " + username + "!");
+        if (gameRounds == i) {
+            congratsMessage(username);
         }
 
     }

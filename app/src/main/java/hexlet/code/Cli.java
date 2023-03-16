@@ -11,7 +11,13 @@ public class Cli {
         return username;
     }
     public static String start() {
-        System.out.print("Please enter the game number and press Enter.\n1 - Greet\n2 - Even\n0 - Exit\nYour choice: ");
+        System.out.print("""
+                Please enter the game number and press Enter.
+                1 - Greet
+                2 - Even
+                3 - Calc
+                0 - Exit
+                Your choice:\s""");
         Scanner scanner = new Scanner(System.in);
         return scanner.next();
     }

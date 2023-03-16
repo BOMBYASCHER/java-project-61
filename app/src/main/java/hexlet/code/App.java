@@ -2,7 +2,8 @@ package hexlet.code;
 
 import static hexlet.code.Cli.start;
 import static hexlet.code.Cli.getName;
-import static hexlet.code.Even.evenGame;
+import static hexlet.code.games.Even.evenGame;
+import static hexlet.code.games.Calc.calcGame;
 
 public class App {
     public static void main(String[] args) {
@@ -15,6 +16,8 @@ public class App {
             case "2":
                 evenGame();
                 break;
+            case "3":
+                calcGame();
             default:
         }
     }
