@@ -11,6 +11,7 @@ import static hexlet.code.Engine.gameRounds;
 public class Calc {
     public static void calcGame() {
         String username = getName();
+        System.out.println("What is the result of the expression?");
         byte i = 0;
         while (i < gameRounds) {
             int firstNumber = (int) (Math.random() * 100);

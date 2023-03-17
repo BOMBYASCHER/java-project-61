@@ -4,6 +4,7 @@ import static hexlet.code.Cli.start;
 import static hexlet.code.Cli.getName;
 import static hexlet.code.games.Even.evenGame;
 import static hexlet.code.games.Calc.calcGame;
+import static hexlet.code.games.GCD.gcdGame;
 
 public class App {
     public static void main(String[] args) {
@@ -18,6 +19,10 @@ public class App {
                 break;
             case "3":
                 calcGame();
+                break;
+            case "4":
+                gcdGame();
+                break;
             default:
         }
     }
