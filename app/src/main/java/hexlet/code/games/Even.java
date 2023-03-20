@@ -7,6 +7,7 @@ import static hexlet.code.Engine.questionMessage;
 import static hexlet.code.Engine.stopMessage;
 import static hexlet.code.Engine.userEnter;
 import static hexlet.code.Engine.gameRounds;
+import static hexlet.code.Engine.randomNumber;
 public class Even {
     public static void evenGame() {
         String username = getName();
@@ -14,7 +15,7 @@ public class Even {
         byte i = 0;
         String correctAnswer;
         while (i < gameRounds) {
-            byte number = (byte) (Math.random() * 100);
+            int number = randomNumber(100);
             questionMessage(String.valueOf(number));
             String userAnswer = userEnter();
             if (number % 2 == 0) {

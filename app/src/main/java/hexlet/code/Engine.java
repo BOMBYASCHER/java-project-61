@@ -25,4 +25,10 @@ public class Engine {
     public static void congratsMessage(String username) {
         System.out.println("Congratulations, " + username + "!");
     }
+    public static int randomNumber(int maxValue) {
+        return (int) (Math.random() * maxValue);
+    }
+    public static int randomNumber(int minValue, int maxValue) {
+        return (int) (Math.random() * (maxValue - minValue) + minValue);
+    }
 }

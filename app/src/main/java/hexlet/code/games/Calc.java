@@ -7,6 +7,7 @@ import static hexlet.code.Engine.questionMessage;
 import static hexlet.code.Engine.stopMessage;
 import static hexlet.code.Engine.userEnter;
 import static hexlet.code.Engine.gameRounds;
+import static hexlet.code.Engine.randomNumber;
 
 public class Calc {
     public static void calcGame() {
@@ -14,14 +15,14 @@ public class Calc {
         System.out.println("What is the result of the expression?");
         byte i = 0;
         while (i < gameRounds) {
-            int firstNumber = (int) (Math.random() * 100);
-            int secondNumber = (int) (Math.random() * 100);
+            int firstNumber = randomNumber(100);
+            int secondNumber = randomNumber(100);
             String expression = "";
             String correctAnswer = "";
             String userAnswer;
-            int key = (byte) (Math.random() * 3);
+            int key = randomNumber(3);
             if (key == 2) {
-                secondNumber = (int) (Math.random() * 10);
+                secondNumber = randomNumber(10);
             }
             switch (key) {
                 case 0 -> {

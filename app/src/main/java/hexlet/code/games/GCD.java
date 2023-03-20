@@ -7,6 +7,7 @@ import static hexlet.code.Engine.questionMessage;
 import static hexlet.code.Engine.stopMessage;
 import static hexlet.code.Engine.userEnter;
 import static hexlet.code.Engine.gameRounds;
+import static hexlet.code.Engine.randomNumber;
 public class GCD {
     static int getGcd(int a, int b) {
         if (b == 0) {
@@ -22,8 +23,8 @@ public class GCD {
         while (i < gameRounds) {
             String expression;
             String userAnswer;
-            int firstNumber = (int) (Math.random() * 100);
-            int secondNumber = (int) (Math.random() * 100);
+            int firstNumber = randomNumber(100);
+            int secondNumber = randomNumber(100);
             int maxNumber = Math.max(firstNumber, secondNumber);
             if (firstNumber == 0 || secondNumber == 0) {
                 correctAnswer = String.valueOf(maxNumber);
