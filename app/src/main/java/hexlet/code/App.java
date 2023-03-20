@@ -6,6 +6,7 @@ import static hexlet.code.games.Even.evenGame;
 import static hexlet.code.games.Calc.calcGame;
 import static hexlet.code.games.GCD.gcdGame;
 import static hexlet.code.games.Progression.progressionGame;
+import static hexlet.code.games.Prime.primeGame;
 
 public class App {
     public static void main(String[] args) {
@@ -26,6 +27,9 @@ public class App {
                 break;
             case "5":
                 progressionGame();
+                break;
+            case "6":
+                primeGame();
                 break;
             default:
         }
