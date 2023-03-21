@@ -13,7 +13,6 @@ public class Cli {
         return username;
     }
     public static String start() {
-        System.out.println("/May I have you name?/");
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
