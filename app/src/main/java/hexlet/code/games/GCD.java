@@ -21,6 +21,7 @@ public class GCD {
         String correctAnswer;
         byte i = 0;
         int maxRandomNumber = 100;
+
         while (i < getGameRounds()) {
             String expression;
             String userAnswer;

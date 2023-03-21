@@ -13,6 +13,7 @@ public class Progression {
 
     public static StringBuilder generateProgression(int lengthOfProgression, int correctAnswer) {
         int maxStepValue = 10;
+
         int step = randomNumber(1, maxStepValue);
         int positionOfNumber = randomNumber(1, lengthOfProgression);
         StringBuilder expression = new StringBuilder();
@@ -31,11 +32,12 @@ public class Progression {
     public static void progressionGame() {
         String username = getName();
         System.out.println("What number is missing in the progression?");
-        int lengthOfProgression = 10;
         byte i = 0;
+        int lengthOfProgression = 10;
+        int minRandomNumber = -100;
+        int maxRandomNumber = 100;
+
         while (i < getGameRounds()) {
-            int minRandomNumber = -100;
-            int maxRandomNumber = 100;
             int correctAnswer = randomNumber(minRandomNumber, maxRandomNumber);
             questionMessage(String.valueOf(generateProgression(lengthOfProgression, correctAnswer)));
             String userAnswer = userEnter();

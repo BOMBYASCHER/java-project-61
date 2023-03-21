@@ -17,6 +17,7 @@ public class Calc {
         int countExpressions = 3;
         int maxRandomNumber = 100;
         int maxValueMultiply = 10;
+
         while (i < getGameRounds()) {
             int firstNumber = randomNumber(maxRandomNumber);
             int secondNumber = randomNumber(maxRandomNumber);

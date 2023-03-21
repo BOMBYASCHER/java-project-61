@@ -24,6 +24,7 @@ public class Prime {
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         byte i = 0;
         int maxRandomNumber = 100;
+
         while (i < getGameRounds()) {
             int number = randomNumber(maxRandomNumber);
             questionMessage(String.valueOf(number));
