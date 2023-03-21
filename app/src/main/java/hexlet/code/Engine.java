@@ -3,10 +3,10 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    private static final byte gameRounds = 3;
+    private static final byte GAME_ROUNDS = 3;
 
     public static byte getGameRounds() {
-        return gameRounds;
+        return GAME_ROUNDS;
     }
     public static void passMessage() {
         System.out.println("Correct!");
