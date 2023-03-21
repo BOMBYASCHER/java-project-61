@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class Cli {
     public static String getName() {
-        System.out.println("\nWelcome to the Brain Games!");
+        System.out.println();
+        System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have you name? ");
         Scanner scanner = new Scanner(System.in);
         String username = scanner.next();
