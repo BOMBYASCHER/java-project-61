@@ -6,7 +6,7 @@ import static hexlet.code.Engine.passMessage;
 import static hexlet.code.Engine.questionMessage;
 import static hexlet.code.Engine.stopMessage;
 import static hexlet.code.Engine.userEnter;
-import static hexlet.code.Engine.gameRounds;
+import static hexlet.code.Engine.getGameRounds;
 import static hexlet.code.Engine.randomNumber;
 
 public class Calc {
@@ -14,15 +14,18 @@ public class Calc {
         String username = getName();
         System.out.println("What is the result of the expression?");
         byte i = 0;
-        while (i < gameRounds) {
-            int firstNumber = randomNumber(100);
-            int secondNumber = randomNumber(100);
+        int countExpressions = 3;
+        int maxRandomNumber = 100;
+        int maxValueMultiply = 10;
+        while (i < getGameRounds()) {
+            int firstNumber = randomNumber(maxRandomNumber);
+            int secondNumber = randomNumber(maxRandomNumber);
             String expression = "";
             String correctAnswer = "";
             String userAnswer;
-            int key = randomNumber(3);
+            int key = randomNumber(countExpressions);
             if (key == 2) {
-                secondNumber = randomNumber(10);
+                secondNumber = randomNumber(maxValueMultiply);
             }
             switch (key) {
                 case 0 -> {
@@ -50,7 +53,7 @@ public class Calc {
                 break;
             }
         }
-        if (i == gameRounds) {
+        if (i == getGameRounds()) {
             congratsMessage(username);
         }
     }

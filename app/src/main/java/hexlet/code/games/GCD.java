@@ -6,25 +6,26 @@ import static hexlet.code.Engine.passMessage;
 import static hexlet.code.Engine.questionMessage;
 import static hexlet.code.Engine.stopMessage;
 import static hexlet.code.Engine.userEnter;
-import static hexlet.code.Engine.gameRounds;
+import static hexlet.code.Engine.getGameRounds;
 import static hexlet.code.Engine.randomNumber;
 public class GCD {
-    static int getGcd(int a, int b) {
-        if (b == 0) {
-            return a;
+    static int getGcd(int firstNumber, int secondNumber) {
+        if (secondNumber == 0) {
+            return firstNumber;
         }
-        return getGcd(b, a % b);
+        return getGcd(secondNumber, firstNumber % secondNumber);
     }
     public static void gcdGame() {
         String username = getName();
         System.out.println("Find the greatest common divisor of given numbers.");
         String correctAnswer;
         byte i = 0;
-        while (i < gameRounds) {
+        int maxRandomNumber = 100;
+        while (i < getGameRounds()) {
             String expression;
             String userAnswer;
-            int firstNumber = randomNumber(100);
-            int secondNumber = randomNumber(100);
+            int firstNumber = randomNumber(maxRandomNumber);
+            int secondNumber = randomNumber(maxRandomNumber);
             int maxNumber = Math.max(firstNumber, secondNumber);
             if (firstNumber == 0 || secondNumber == 0) {
                 correctAnswer = String.valueOf(maxNumber);
@@ -42,7 +43,7 @@ public class GCD {
                 break;
             }
         }
-        if (i == gameRounds) {
+        if (i == getGameRounds()) {
             congratsMessage(username);
         }
     }

@@ -6,16 +6,17 @@ import static hexlet.code.Engine.passMessage;
 import static hexlet.code.Engine.questionMessage;
 import static hexlet.code.Engine.stopMessage;
 import static hexlet.code.Engine.userEnter;
-import static hexlet.code.Engine.gameRounds;
+import static hexlet.code.Engine.getGameRounds;
 import static hexlet.code.Engine.randomNumber;
 public class Even {
     public static void evenGame() {
         String username = getName();
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         byte i = 0;
+        int maxRandomNumber = 100;
         String correctAnswer;
-        while (i < gameRounds) {
-            int number = randomNumber(100);
+        while (i < getGameRounds()) {
+            int number = randomNumber(maxRandomNumber);
             questionMessage(String.valueOf(number));
             String userAnswer = userEnter();
             if (number % 2 == 0) {
@@ -36,7 +37,7 @@ public class Even {
                 break;
             }
         }
-        if (gameRounds == i) {
+        if (getGameRounds() == i) {
             congratsMessage(username);
         }
 

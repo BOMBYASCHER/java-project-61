@@ -3,7 +3,11 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    public static byte gameRounds = 3;
+    private static final byte gameRounds = 3;
+
+    public static byte getGameRounds() {
+        return gameRounds;
+    }
     public static void passMessage() {
         System.out.println("Correct!");
     }

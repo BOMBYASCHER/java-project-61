@@ -6,7 +6,7 @@ import static hexlet.code.Engine.passMessage;
 import static hexlet.code.Engine.questionMessage;
 import static hexlet.code.Engine.stopMessage;
 import static hexlet.code.Engine.userEnter;
-import static hexlet.code.Engine.gameRounds;
+import static hexlet.code.Engine.getGameRounds;
 import static hexlet.code.Engine.randomNumber;
 public class Prime {
     public static boolean isPrime(int number) {
@@ -23,8 +23,9 @@ public class Prime {
         String username = getName();
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         byte i = 0;
-        while (i < gameRounds) {
-            int number = randomNumber(100);
+        int maxRandomNumber = 100;
+        while (i < getGameRounds()) {
+            int number = randomNumber(maxRandomNumber);
             questionMessage(String.valueOf(number));
             String correctAnswer = "no";
             if (isPrime(number)) {
@@ -39,7 +40,7 @@ public class Prime {
                 break;
             }
         }
-        if (i == gameRounds) {
+        if (i == getGameRounds()) {
             congratsMessage(username);
         }
     }
