@@ -12,7 +12,7 @@ import static hexlet.code.Engine.randomNumber;
 public class Progression {
 
     public static StringBuilder generateProgression(int lengthOfProgression, int correctAnswer) {
-        int maxStepValue = 10;
+        final int maxStepValue = 10;
 
         int step = randomNumber(1, maxStepValue);
         int positionOfNumber = randomNumber(1, lengthOfProgression);
@@ -33,9 +33,9 @@ public class Progression {
         String username = getName();
         System.out.println("What number is missing in the progression?");
         byte i = 0;
-        int lengthOfProgression = 10;
-        int minRandomNumber = -100;
-        int maxRandomNumber = 100;
+        final int lengthOfProgression = 10;
+        final int minRandomNumber = -100;
+        final int maxRandomNumber = 100;
 
         while (i < getGameRounds()) {
             int correctAnswer = randomNumber(minRandomNumber, maxRandomNumber);

@@ -23,7 +23,7 @@ public class Prime {
         String username = getName();
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         byte i = 0;
-        int maxRandomNumber = 100;
+        final int maxRandomNumber = 100;
 
         while (i < getGameRounds()) {
             int number = randomNumber(maxRandomNumber);

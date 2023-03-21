@@ -13,8 +13,7 @@ public class Even {
         String username = getName();
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         byte i = 0;
-
-        int maxNumber = 100;
+        final int maxNumber = 100;
 
         String correctAnswer;
         while (i < getGameRounds()) {

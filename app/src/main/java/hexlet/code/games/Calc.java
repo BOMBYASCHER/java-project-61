@@ -14,9 +14,9 @@ public class Calc {
         String username = getName();
         System.out.println("What is the result of the expression?");
         byte i = 0;
-        int countExpressions = 3;
-        int maxNumber = 100;
-        int maxMultiplication = 10;
+        final int countExpressions = 3;
+        final int maxNumber = 100;
+        final int maxMultiplication = 10;
 
         while (i < getGameRounds()) {
             int firstNumber = randomNumber(maxNumber);

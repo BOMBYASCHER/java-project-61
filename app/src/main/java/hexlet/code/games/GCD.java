@@ -20,7 +20,7 @@ public class GCD {
         System.out.println("Find the greatest common divisor of given numbers.");
         String correctAnswer;
         byte i = 0;
-        int maxRandomNumber = 100;
+        final int maxRandomNumber = 100;
 
         while (i < getGameRounds()) {
             String expression;
