@@ -13,11 +13,12 @@ public class Even {
         String username = getName();
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         byte i = 0;
-        int maxRandomNumber = 100;
+
+        int maxNumber = 100;
 
         String correctAnswer;
         while (i < getGameRounds()) {
-            int number = randomNumber(maxRandomNumber);
+            int number = randomNumber(maxNumber);
             questionMessage(String.valueOf(number));
             String userAnswer = userEnter();
             if (number % 2 == 0) {

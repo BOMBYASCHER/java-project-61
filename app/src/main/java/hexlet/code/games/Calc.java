@@ -15,18 +15,18 @@ public class Calc {
         System.out.println("What is the result of the expression?");
         byte i = 0;
         int countExpressions = 3;
-        int maxRandomNumber = 100;
-        int maxValueMultiply = 10;
+        int maxNumber = 100;
+        int maxMultiplication = 10;
 
         while (i < getGameRounds()) {
-            int firstNumber = randomNumber(maxRandomNumber);
-            int secondNumber = randomNumber(maxRandomNumber);
+            int firstNumber = randomNumber(maxNumber);
+            int secondNumber = randomNumber(maxNumber);
             String expression = "";
             String correctAnswer = "";
             String userAnswer;
             int key = randomNumber(countExpressions);
             if (key == 2) {
-                secondNumber = randomNumber(maxValueMultiply);
+                secondNumber = randomNumber(maxMultiplication);
             }
             switch (key) {
                 case 0 -> {
