@@ -11,6 +11,9 @@ import static hexlet.code.Engine.randomNumber;
 public class Prime {
     public static boolean isPrime(int number) {
         byte j = 2;
+        if (number < 2) {
+            return false;
+        }
         while (j <= Math.sqrt(number)) {
             if (number % j == 0) {
                 return false;
