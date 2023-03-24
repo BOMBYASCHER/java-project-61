@@ -33,6 +33,6 @@ public class Engine {
         return (int) Math.round(Math.random() * (maxValue - minValue) + minValue);
     }
     public static int randomNumber(int maxValue) {
-        return (int) (Math.random() * maxValue);
+        return (int) Math.round(Math.random() * maxValue);
     }
 }

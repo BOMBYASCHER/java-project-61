@@ -14,7 +14,6 @@ public class Calc {
         String username = getName();
         System.out.println("What is the result of the expression?");
         byte i = 0;
-        final int countExpressions = 3;
         final int maxNumber = 100;
         final int maxMultiplication = 10;
 
@@ -24,7 +23,7 @@ public class Calc {
             String expression = "";
             String correctAnswer = "";
             String userAnswer;
-            int key = randomNumber(countExpressions);
+            int key = randomNumber(0, 2);
             if (key == 2) {
                 secondNumber = randomNumber(maxMultiplication);
             }

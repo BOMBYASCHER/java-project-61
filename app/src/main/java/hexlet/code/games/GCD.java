@@ -20,13 +20,12 @@ public class GCD {
         System.out.println("Find the greatest common divisor of given numbers.");
         String correctAnswer;
         byte i = 0;
-        final int maxNumber = 2;
-        final int minNumber = 0;
+        final int maxNumber = 100;
         while (i < getGameRounds()) {
             String expression;
             String userAnswer;
-            int firstNumber = randomNumber(minNumber, maxNumber);
-            int secondNumber = randomNumber(minNumber, maxNumber);
+            int firstNumber = randomNumber(maxNumber);
+            int secondNumber = randomNumber(maxNumber);
             correctAnswer = String.valueOf(getGcd(firstNumber, secondNumber));
             expression = firstNumber + " " + secondNumber;
             questionMessage(expression);
