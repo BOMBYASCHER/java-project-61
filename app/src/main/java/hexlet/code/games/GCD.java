@@ -20,19 +20,14 @@ public class GCD {
         System.out.println("Find the greatest common divisor of given numbers.");
         String correctAnswer;
         byte i = 0;
-        final int maxRandomNumber = 100;
-
+        final int maxNumber = 2;
+        final int minNumber = 0;
         while (i < getGameRounds()) {
             String expression;
             String userAnswer;
-            int firstNumber = randomNumber(maxRandomNumber);
-            int secondNumber = randomNumber(maxRandomNumber);
-            int maxNumber = Math.max(firstNumber, secondNumber);
-            if (firstNumber == 0 || secondNumber == 0) {
-                correctAnswer = String.valueOf(maxNumber);
-            } else {
-                correctAnswer = String.valueOf(getGcd(firstNumber, secondNumber));
-            }
+            int firstNumber = randomNumber(minNumber, maxNumber);
+            int secondNumber = randomNumber(minNumber, maxNumber);
+            correctAnswer = String.valueOf(getGcd(firstNumber, secondNumber));
             expression = firstNumber + " " + secondNumber;
             questionMessage(expression);
             userAnswer = userEnter();

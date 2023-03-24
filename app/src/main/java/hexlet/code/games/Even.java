@@ -14,7 +14,6 @@ public class Even {
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         byte i = 0;
         final int maxNumber = 100;
-
         String correctAnswer;
         while (i < getGameRounds()) {
             int number = randomNumber(maxNumber);
